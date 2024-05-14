@@ -1,0 +1,1 @@
+# TinyML-enhanced-Multifunctional-Home-Smart-System
