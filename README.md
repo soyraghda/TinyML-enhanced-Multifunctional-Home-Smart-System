@@ -26,5 +26,7 @@ Actuators:
 Supporting Components:
 1.	Resistors: Resistors are integrated into the circuit to regulate the current in the LED circuit, preventing damage to the LED.
 2.	Jumper Wires: Jumper wires establish connections between different components in the circuit, ensuring a well-organized and functional circuit layout.
-![image](https://github.com/soyraghda/TinyML-enhanced-Multifunctional-Home-Smart-System/assets/32418549/e530fa35-ee8d-4447-83e1-d26b278e8331)
+
+## Circuit Connection
+ ![image](https://github.com/soyraghda/TinyML-enhanced-Multifunctional-Home-Smart-System/assets/32418549/3f88a607-0647-46d5-af6c-2191803d3f7a)
 
