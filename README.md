@@ -27,6 +27,10 @@ Supporting Components:
 1.	Resistors: Resistors are integrated into the circuit to regulate the current in the LED circuit, preventing damage to the LED.
 2.	Jumper Wires: Jumper wires establish connections between different components in the circuit, ensuring a well-organized and functional circuit layout.
 
-## Circuit Connection
- ![image](https://github.com/soyraghda/TinyML-enhanced-Multifunctional-Home-Smart-System/assets/32418549/3f88a607-0647-46d5-af6c-2191803d3f7a)
+
+## Data Collection
+
+The dataset contains audio recordings featuring expressions like "lights on," "lights off," and background noise. The data used for the phrases "lights on" and "lights off" were systematically collected from a diverse demographic, including individuals of varied genders, ages, and accents, comprising family members, friends, and university students. Regarding the noise recordings, it was created by imitating noises and recording them, as well as using available noise recordings on YouTube. The temporal duration of the dataset spans 6 minutes and 12 seconds, encompassing a collection of 208 recordings, with 79 recordings for the "lights off" phrase, 77 for "lights on,” and 52 for background noise.
+
+![image](https://github.com/soyraghda/TinyML-enhanced-Multifunctional-Home-Smart-System/assets/32418549/dbe3d0d8-66ca-4351-a0e7-2bc7940fb6b9)
 
