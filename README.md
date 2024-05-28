@@ -1,1 +1,3 @@
 # TinyML-enhanced-Multifunctional-Home-Smart-System
+
+Smart Home technology seamlessly integrates various technologies into home networks to enhance the quality of human life. Researchers have been actively exploring the potential of intelligent home technology for over a decade. It represents a convergence of networks, services, and more, aiming to improve the overall living experience. This project introduces a multifunctional smart home system implemented on Arduino Nano 33 BLE, using a machine learning algorithm to interpret user commands for responsive light control. In the event of a fire, the system utilizes a flame sensor to detect it, triggering a buzzer and concurrently sending the user an email notification.
