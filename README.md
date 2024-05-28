@@ -41,4 +41,21 @@ The dataset was split into 75% for training and 25% for testing to build the mac
 
 The model was deployed using the EON compiler from Edge Impulse, which converts TensorFlow Lite models into .cpp and .h files optimized for embedded systems. This approach shifts heavy computational tasks to servers, producing C++ files for efficient model inference on devices. The generated .h file was integrated into the Arduino IDE for coding the system’s firmware. The model predicts audio inputs from the Arduino’s microphone, classifying them as “lights on,” “lights off,” or “noise.” Actions are taken based on the highest prediction, such as turning lights on or off or doing nothing for noise.
 
+## Fire Detection System
+
+### Fire sensor and ESP-01 Connection
+For the fire detection system, an infrared fire sensor was utilized, connected to an Arduino on PIN "D2" to detect fire. When a fire was detected, the Arduino turned off the light, activated a buzzer, and sent an email alert. Since the Arduino Nano 33 BLE lacked internet capability, an ESP-01 Wi-Fi module was used to send email notifications via IFTTT. The ESP-01 was programmed using the Arduino IDE and connected to a USB adapter to upload the firmware.
+
+### Email Notification
+An email notification system was developed to alert users about fire occurrences using IFTTT (If This Then That), a web-based automation platform. IFTTT enables different devices, services, and applications to communicate and initiate predefined actions based on specific conditions through "applets," which are conditional statements specifying trigger events and resulting actions. When the fire flame sensor detects a fire, IFTTT triggers a pre-made event named “fire_detected,” which sends the user an email titled “FIRE IS DETECTED IN YOUR ROOM” with the message body “THE SYSTEM HAS DETECTED FIRE IN THE ROOM, PLEASE COME AND CHECK.”
+
+ ![image](https://github.com/soyraghda/TinyML-enhanced-Multifunctional-Home-Smart-System/assets/32418549/62b0340c-4fdd-4685-8e62-d225531be6ca)
+
+ ## Integration of Voice and Fire Systems
+To integrate both systems together, The  main system firmware was made to continuously records the user's voice input and includes an interrupt code to halt operations upon fire detection. When a fire is detected, the system turns off lights and sends a serial signal denoted "1" to the ESP-01 module, indicating the fire occurrence. Upon receiving the signal, the ESP-01 verifies its first instance and attempts to connect to Wi-Fi. Upon successful connection, it triggers an email notification via an HTTP GET request to the IFTTT application, ensuring only one notification every 25 minutes using a timer function. If not the first signal reception, the ESP-01 checks the signal and timer status, connecting to Wi-Fi and triggering an email notification if conditions are met, then resetting the timer. Otherwise, it waits until the timer expires before attempting another notification.
+
+
+
+
+
 
